@@ -1,10 +1,20 @@
-runtime: php74
+runtime: php
+env: flex
 
+runtime_config:
+  document_root: web
+
+manual_scaling:
+  instances: 1
+resources:
+  cpu: 1
+  memory_gb: 0.5
+  disk_size_gb: 10
 env_variables:
-    GOOGLE_STORAGE_BUCKET: ""
-    # populate these to use the "mysql" or "postres" backends
-    CLOUDSQL_CONNECTION_NAME: ""
-    CLOUDSQL_USER: ""
-    CLOUDSQL_PASSWORD: ""
-    ## Uncomment to give your database a name other than "bookshelf"
-    # CLOUDSQL_DATABASE_NAME: ""
+  GOOGLE_STORAGE_BUCKET: ""
+  # populate these to use the "mysql" or "postres" backends
+  CLOUDSQL_CONNECTION_NAME: ""
+  CLOUDSQL_USER: ""
+  CLOUDSQL_PASSWORD: ""
+  ## Uncomment to give your database a name other than "bookshelf"
+  # CLOUDSQL_DATABASE_NAME: ""
